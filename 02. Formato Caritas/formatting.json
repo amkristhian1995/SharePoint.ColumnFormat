@@ -1,0 +1,50 @@
+{
+    "elmType": "div",
+    "style": {
+        "align-items": "center",
+        "display": "flex",
+        "justify-content": "center",
+        "margin": "auto",
+        "margin-left": "0",
+        "min-height": "initial",
+        "padding": "5px"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "style": {
+                "align-items": "center",
+                "background-color": "=if([$Estado] == 'Pendiente', 'rgba(241,196,15,1)', if([$Estado] == 'Aprobado','rgba(46,204,113,1)', 'rgba(231,76,60,1)'))",
+                "border-radius": "50%",
+                "color": "#FFF",
+                "display": "flex",
+                "height": "20px",
+                "justify-content": "center",
+                "width": "20px"
+            },
+            "children": [
+                {
+                    "elmType": "span",
+                    "style": {
+                        "font-size": "15px",
+                        "display": "inline-block"
+                    },
+                    "attributes": {
+                        "iconName": "=if([$Estado] == 'Pendiente', 'EmojiNeutral', if([$Estado] == 'Aprobado','Emoji2', 'EmojiDisappointed'))"
+                    }
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "txtContent": "[$Estado]",
+            "style": {
+                "box-sizing": "border-box",
+                "color": "#555",
+                "font-size": "12px",
+                "font-weight": "500",
+                "padding": "0 5px"
+            }
+        }
+    ]
+}

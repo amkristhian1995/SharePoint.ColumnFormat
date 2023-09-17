@@ -1,0 +1,85 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+        "background-color": "#FFF",
+        "border": "1px solid #555",
+        "border-radius": "5px",
+        "display": "inline-flex",
+        "height": "30px",
+        "justify-content": "space-between",
+        "margin": "auto",
+        "min-height": "initial",
+        "overflow": "hidden",
+        "text-align": "center",
+        "width": "100%"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "txtContent": "Baja",
+            "style": {
+                "align-items": "center",
+                "background-color": "=if([$Prioridad] == 'Baja', '#7F1D1D', '#FFF')",
+                "color": "=if([$Prioridad] == 'Baja', '#FFF', '#333')",
+                "cursor": "pointer",
+                "display": "inline-flex",
+                "font-size": "12px",
+                "font-weight": "500",
+                "height": "100%",
+                "justify-content": "center",
+                "width": "33%"
+            },
+            "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                    "Prioridad": "Baja"
+                }
+            }
+        },
+        {
+            "elmType": "div",
+            "txtContent": "Media",
+            "style": {
+                "align-items": "center",
+                "background-color": "=if([$Prioridad] == 'Media', '#713F12', '#FFF')",
+                "color": "=if([$Prioridad] == 'Media', '#FFF', '#333')",
+                "cursor": "pointer",
+                "display": "inline-flex",
+                "font-size": "12px",
+                "font-weight": "500",
+                "height": "100%",
+                "justify-content": "center",
+                "width": "33%"
+            },
+            "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                    "Prioridad": "Media"
+                }
+            }
+        },
+        {
+            "elmType": "div",
+            "txtContent": "Alta",
+            "style": {
+                "align-items": "center",
+                "background-color": "=if([$Prioridad] == 'Alta', '#064E3B', '#FFF')",
+                "color": "=if([$Prioridad] == 'Alta', '#FFF', '#333')",
+                "cursor": "pointer",
+                "display": "inline-flex",
+                "font-size": "12px",
+                "font-weight": "500",
+                "height": "100%",
+                "justify-content": "center",
+                "width": "33%"
+            },
+            "customRowAction": {
+                "action": "setValue",
+                "actionInput": {
+                    "Prioridad": "Alta"
+                }
+            }
+        }
+    ]
+}

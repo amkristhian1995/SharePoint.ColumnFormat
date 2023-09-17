@@ -1,0 +1,30 @@
+{
+    "elmType": "div",
+    "style": {
+        "align-items": "center",
+        "display": "flex",
+        "justify-content": "start"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "style": {
+                "background-color": "=if([$Estado] == 'Pendiente', 'rgba(241,196,15,1)' , if([$Estado] == 'Aprobado', 'rgba(46,204,113,1)', 'rgba(231,76,60,1)'))",
+                "border-radius": "50%",
+                "height": "20px",
+                "width": "20px"
+            }
+        },
+        {
+            "elmType": "div",
+            "txtContent": "[$Estado]",
+            "style": {
+                "box-sizing": "border-box",
+                "color": "#555",
+                "font-size": "12px",
+                "font-weight": "500",
+                "padding": "0 5px"
+            }
+        }
+    ]
+}
